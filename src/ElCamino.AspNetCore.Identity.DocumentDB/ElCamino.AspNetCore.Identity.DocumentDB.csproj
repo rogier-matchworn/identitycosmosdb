@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <Description>Azure CosmosDB Provider to support AspNet Identity Core frameworks for .NET.</Description>
+    <Description>Azure CosmosDB Provider to support AspNet Identity Core frameworks for .NET. Important! This package has been renamed to ElCamino.AspnetCore.Identity.CosmosDB. Upgrade/breaking change info here https://github.com/dlmelendez/identitycosmosdb/.</Description>
     <Copyright>Copyright © 2019 David Melendez, MIT License</Copyright>
     <AssemblyTitle>Azure DocumentDB Provider for ASP.NET Identity Core</AssemblyTitle>
     <Authors>David Melendez</Authors>
@@ -11,19 +11,19 @@
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <PackageId>ElCamino.AspNetCore.Identity.DocumentDB</PackageId>
     <PackageTags>ASP.NET;Identity Core;Azure;CosmosDB;DocumentDB;MVC;UserStore;RoleStore;UserManager;Microsoft.AspNetCore.Identity</PackageTags>
-    <PackageReleaseNotes>
-      Check https://github.com/dlmelendez/identitycoredocumentdb/releases for the latest release information.
+    <PackageReleaseNotes>Check https://github.com/dlmelendez/identitycoredocumentdb/releases for the latest release information.
+ Important! This package has been renamed to ElCamino.AspnetCore.Identity.CosmosDB. Upgrade/breaking change info here https://github.com/dlmelendez/identitycosmosdb/.
 
-    </PackageReleaseNotes>
+</PackageReleaseNotes>
     <PackageIcon>projectNugetPic.png</PackageIcon>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/dlmelendez/identitycoredocumentdb.git</RepositoryUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.2.0</Version>
-    <AssemblyVersion>2.2.0.0</AssemblyVersion>
-    <FileVersion>2.2.0.0</FileVersion>
+    <Version>2.2.1</Version>
+    <AssemblyVersion>2.2.1.0</AssemblyVersion>
+    <FileVersion>2.2.1.0</FileVersion>
     <PackageProjectUrl>https://github.com/dlmelendez/identitycoredocumentdb</PackageProjectUrl>
     <DebugType>Full</DebugType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
