@@ -1,6 +1,7 @@
 // MIT License Copyright 2019 (c) David Melendez. All rights reserved. See License.txt in the project root for license information.
 
 using System;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using ElCamino.AspNetCore.Identity.CosmosDB.Helpers;
@@ -24,6 +25,7 @@ namespace ElCamino.AspNetCore.Identity.CosmosDB.Model
         private TKey _Id;
 
         [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public TKey Id
         {
             get => _Id;

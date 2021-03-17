@@ -591,13 +591,15 @@ namespace ElCamino.AspNetCore.Identity.CosmosDB
         {
             cancellationToken.ThrowIfCancellationRequested();
             ThrowIfDisposed();
-            StoredProcedureExecuteResponse<string> response = await Context.IdentityContainer.Scripts.ExecuteStoredProcedureAsync<string>(
-                Context.GetUserByIdSproc,
-                new PartitionKey(PartitionKeyHelper.GetPartitionKeyFromId(userId)),
-                new dynamic[] { userId });
+            return await Context.IdentityContainer.ReadItemAsync<TUser>(userId,
+                new PartitionKey(PartitionKeyHelper.GetPartitionKeyFromId(userId)));
+            //StoredProcedureExecuteResponse<string> response = await Context.IdentityContainer.Scripts.ExecuteStoredProcedureAsync<string>(
+            //    Context.GetUserByIdSproc,
+            //    new PartitionKey(PartitionKeyHelper.GetPartitionKeyFromId(userId)),
+            //    new dynamic[] { userId });
 
-            return !string.IsNullOrWhiteSpace(response.Resource) ?
-                JsonConvert.DeserializeObject<TUser>(response.Resource) : null;
+            //return !string.IsNullOrWhiteSpace(response.Resource) ?
+            //    JsonConvert.DeserializeObject<TUser>(response.Resource) : null;
             
         }
 

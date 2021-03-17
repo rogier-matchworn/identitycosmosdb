@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <Description>Azure CosmosDB Provider to support AspNet Identity Core frameworks for .NET.</Description>
+    <Description>Azure CosmosDB Provider to support AspNet Identity Core frameworks for .NET.
+
+This package is MatchWornShirt's fork of David's original project but with updated dependencies.</Description>
     <Copyright>Copyright © 2019 David Melendez, MIT License</Copyright>
     <AssemblyTitle>Azure CosmosDB Provider for ASP.NET Identity Core</AssemblyTitle>
     <Authors>David Melendez</Authors>
@@ -9,35 +11,39 @@
     <AssemblyOriginatorKeyFile>../../tools/Key.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>ElCamino.AspNetCore.Identity.CosmosDB</PackageId>
+    <PackageId>MatchWornShirt.AspNetCore.Identity.CosmosDB</PackageId>
     <PackageTags>ASP.NET;Identity Core;Azure;CosmosDB;MVC;UserStore;RoleStore;UserManager;Microsoft.AspNetCore.Identity</PackageTags>
-    <PackageReleaseNotes>
+    <PackageReleaseNotes>- Removed usage of stored procedure for finding users by id.
+- Added System.Text.Json jsonpropertyname attributes on id properties.
+
       Check https://github.com/dlmelendez/identitycosmosdb/releases for the latest release information.
 
-    </PackageReleaseNotes>
+</PackageReleaseNotes>
     <PackageIcon>projectNugetPic.png</PackageIcon>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/dlmelendez/identitycosmosdb.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/rogier-matchworn/identitycosmosdb</RepositoryUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>3.0.1</Version>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
-    <FileVersion>3.0.1.0</FileVersion>
-    <PackageProjectUrl>https://github.com/dlmelendez/identitycosmosdb</PackageProjectUrl>
+    <Version>3.0.3</Version>
+    <AssemblyVersion>3.0.3.0</AssemblyVersion>
+    <FileVersion>3.0.3.0</FileVersion>
+    <PackageProjectUrl>https://github.com/rogier-matchworn/identitycosmosdb</PackageProjectUrl>
     <DebugType>Full</DebugType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Product>ElCamino.AspNetCore.Identity.CosmosDB</Product>
 
   </PropertyGroup>
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.4.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.17.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.4" />
     <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.1" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StoredProcs\getUserById_sproc.js">

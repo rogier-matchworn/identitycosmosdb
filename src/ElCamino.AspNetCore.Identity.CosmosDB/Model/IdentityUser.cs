@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ElCamino.AspNetCore.Identity.CosmosDB.Model
 {
@@ -41,6 +42,7 @@ namespace ElCamino.AspNetCore.Identity.CosmosDB.Model
         }
 
         [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public override TKey Id 
         { 
             get => base.Id;
